@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de cadastro</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="singup">
+        <h1 class="singup__title">CADASTRE-SE</h1>
+        <form class="form">
+          <div class="form__group">
+            <label for="inputName" class="form__label hide">Nome</label>
+
+            <input
+              type="text"
+              name="name"
+              class="form__input-text error"
+              id="inputName"
+              placeholder="Nome"
+            />
+            <i class="form__input-icon fas fa-user"></i>
+            <span class="form__message-error">Este campo é obrigatório!</span>
+          </div>
+          <div class="form__group">
+            <label for="inputEmail" class="form__label hide">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              class="form__input-text"
+              id="inputEmail"
+              placeholder="E-mail"
+            />
+            <i class="form__input-icon fas fa-envelope"></i>
+          </div>
+          <div class="form__group">
+            <label for="inputPassword" class="form__label hide">Senha</label>
+            <input
+              type="password"
+              name="password"
+              class="form__input-text"
+              id="inputPassword"
+              placeholder="Senha"
+            />
+            <i class="form__input-icon fas fa-lock"></i>
+            <div class="requirements">
+              <div class="requeriments__progress-bar"></div>
+              <div class="requirements__description">A senha deverá ter:</div>
+              <ul class="requirements__list">
+                <li class="requirements__item checked">
+                  Pelo menos uma letra maiúscula e uma letra minúscula
+                </li>
+                <li class="requirements__item">Pelo menos um número</li>
+                <li class="requirements__item">
+                  Pelo menos 1 caracter especial
+                </li>
+                <li class="requirements__item">Pelo menos 8 caracteres</li>
+              </ul>
+            </div>
+          </div>
+          <div class="form__group">
+            <input
+              type="checkbox"
+              name="terms"
+              class="form__input-checkbox"
+              id="inputTerms"
+            />
+            <label for="inputTerms" class="form__label"
+              >Concordo com os <a href="#" class="form__link">termos</a> e
+              <a href="#" class="form__link">política de privacidade</a>
+            </label>
+          </div>
+          <div class="form__group form__group-center">
+            <button class="form__button-submit" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
