@@ -97,14 +97,21 @@ ul{
 
 .form__input-icon{
   color: #8A93A5;
+  cursor: pointer;
   position: absolute;
   left: 1.5rem;
   top: 2.2rem;
   font-size: 1.5rem;
 }
 
+.form__input-icon.fa-eye{
+  left: auto;
+  right: 2rem;
+}
+
 .form__input-checkbox{
   margin-right: .5rem;
+  cursor: pointer;
 }
 
 .form__button-submit{
@@ -127,7 +134,7 @@ ul{
 .requeriments__progress-bar{
   height: .5rem;
   background: #f3e24a;
-  width: 100%;
+  width: 0;
   border-radius: .5rem;
   margin-bottom: 1.5rem;
 
@@ -152,8 +159,8 @@ ul{
   margin-top: 1.5rem;
   font-weight: bold;
   
-  display: block; 
-  /* para funcionar a margem */
+  display: none; 
+  
 
 }
 
