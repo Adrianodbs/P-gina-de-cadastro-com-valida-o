@@ -4,6 +4,20 @@
 
   const fields = {}
 
+  const showMessageError = (field, message) => {
+    const { element, errorElement } = field
+    element.classList.add('error')
+    errorElement.style.display = 'block'
+    errorElement.textContent = message
+  }
+
+  const hideMessageError = field => {
+    const { element, errorElement } = field
+    element.classList.remove('error')
+    errorElement.style.display = 'none'
+    errorElement.textContent = ''
+  }
+
   const validateRequiredFields = () => {
     let isInvalid = false
     for (const fieldKey in fields) {
@@ -14,25 +28,32 @@
         isRequired
       ) {
         isInvalid = true
-        element.classList.add('error')
-        errorElement.style.display = 'block'
-        errorElement.textContent = 'Este campo é obrigatório'
+
+        showMessageError(field, 'Este campo é obrigatório')
       }
     }
 
     return isInvalid
   }
 
+  const onInputFocus = event => {
+    const field = fields[event.target.name]
+    hideMessageError(field)
+  }
+
   const onFormSubmit = event => {
     event.preventDefault()
-    if (validateRequiredFields()) {
-      return
-    }
+    if (validateRequiredFields()) return
+
     alert('Dados prontos para serem enviados!')
   }
 
   const setListeners = () => {
     form.addEventListener('submit', onFormSubmit)
+    for (const fieldKey in fields) {
+      const { element } = fields[fieldKey]
+      element.addEventListener('focus', onInputFocus)
+    }
   }
 
   const setFieldElements = () => {
