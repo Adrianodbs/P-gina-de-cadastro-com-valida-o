@@ -66,21 +66,31 @@
             <span class="form__message-error" data-error-message></span>
             <div class="requirements">
               <div
-                class="requeriments__progress-bar"
-                data-requirement-progress-bar
+                class="requeriments__progressbar"
+                data-requirement-progressbar
+                data-percentage="0"
               ></div>
               <div class="requirements__description">A senha deverá ter:</div>
               <ul class="requirements__list">
-                <li class="requirements__item" data-requirement-item>
+                <li
+                  class="requirements__item"
+                  data-requirement-item="lowerUpperCase"
+                >
                   Pelo menos 1 letra maiúscula e 1 letra minúscula
                 </li>
-                <li class="requirements__item" data-requirement-item>
+                <li class="requirements__item" data-requirement-item="number">
                   Pelo menos 1 número
                 </li>
-                <li class="requirements__item" data-requirement-item>
+                <li
+                  class="requirements__item"
+                  data-requirement-item="specialCharacter"
+                >
                   Pelo menos 1 caracter especial
                 </li>
-                <li class="requirements__item" data-requirement-item>
+                <li
+                  class="requirements__item"
+                  data-requirement-item="minCharacter"
+                >
                   Pelo menos 8 caracteres
                 </li>
               </ul>
